@@ -1,0 +1,95 @@
+/* App.css */
+
+/* Basic layout */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chat-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .input-container {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .input-field {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .send-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .send-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .responses-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .response-text {
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 1.5;
+    word-wrap: break-word;
+  }
+  
+  .response-text.fw-bold {
+    font-weight: bold;
+    background-color: #e0e0e0;
+  }
+  
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .spinner-border {
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  @media (max-width: 600px) {
+    .input-container {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .input-field {
+      width: 100%;
+    }
+  
+    .send-btn {
+      width: 100%;
+    }
+  }
+  
