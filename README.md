@@ -7,9 +7,8 @@
 - Open your terminal and run the following command to create a new React project using Vite and install the required dependencies:
 
 ```bash
-npx create-vite@latest project-0 --template react
 cd project-0
-npm install @google/generative-ai
+npm install
 npm run dev
 ```
 
@@ -23,10 +22,8 @@ npm run dev
 - Open your terminal and run the following command to create a new React project using Vite and install the required dependencies:
 
 ```bash
-npx create-vite@latest project-1-ChatBot-V1 --template react
 cd project-1-ChatBot-V1
-npm install @google/generative-ai 
-npm install react-markdown react-icons
+npm install
 npm run dev
 ```
 
@@ -42,11 +39,8 @@ The previous App is not fully optimized. This version improves the rendering of 
 - Open your terminal and run the following command to create a new React project using Vite and install the required dependencies:
 
 ```bash
-npx create-vite@latest project-2-ChatBot-V2 --template react
 cd project-2-ChatBot-V2
-npm install @google/generative-ai 
-npm install react-icons
-npm install react-markdown remark-gfm remark-breaks rehype-raw react-syntax-highlighter
+npm install
 npm run dev
 ```
 
@@ -70,11 +64,10 @@ npm run dev
 - Open your terminal and run the following command to create a new React project using Vite and install the required dependencies:
 
 ```bash
-mkdir project-3 && cd project-3
-npm install express @google/generative-ai dotenv
+cd project-3
+npm install
+npm run dev
 ```
-
-
 
 
 - **Ref**
