@@ -9,7 +9,7 @@ function App() {
 
   const genAI = new GoogleGenerativeAI(import.meta.env.VITE_REACT_APP_GEMINI_API_KEY);
   const MODEL_NAME = "gemini-1.5-flash"; 
-  // - gemini-2.0-flash-001
+  // - gemini-2.0-flash
   // - gemini-2.0-flash-lite-preview-02-05
   // - gemini-1.5-flash
   // - gemini-1.5-pro
@@ -23,6 +23,7 @@ function App() {
     setLoading(true);
     try {
       const model = genAI.getGenerativeModel({ model: MODEL_NAME });
+      
       const result = await model.generateContent(inputValue);
       const text = result.response.text();
 

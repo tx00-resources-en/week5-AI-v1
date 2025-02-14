@@ -13,13 +13,18 @@ const generateResponse = async (req, res) => {
       return res.status(400).json({ message: "Prompt is required" });
     }
 
-    // Correct Gemini API request format
     const result = await model.generateContent(prompt);
+    console.log(result);
 
     // console.log("API Result:", JSON.stringify(result, null, 2)); // Log the result to verify its structure
 
     // Safely check for the nested response structure
-    if (result && result.response && result.response.candidates && result.response.candidates.length > 0) {
+    if (
+      result &&
+      result.response &&
+      result.response.candidates &&
+      result.response.candidates.length > 0
+    ) {
       // Extract the relevant text from the response
       const generatedText = result.response.candidates[0].content.parts[0].text;
 
@@ -27,11 +32,18 @@ const generateResponse = async (req, res) => {
       res.json({ response: generatedText });
     } else {
       // Handle case where the expected response structure is missing
-      res.status(500).json({ message: "Unexpected response format from Gemini API", result });
+      res
+        .status(500)
+        .json({
+          message: "Unexpected response format from Gemini API",
+          result,
+        });
     }
   } catch (err) {
     console.error("Error in generateResponse:", err);
-    res.status(500).json({ message: "Internal server error", error: err.message });
+    res
+      .status(500)
+      .json({ message: "Internal server error", error: err.message });
   }
 };
 

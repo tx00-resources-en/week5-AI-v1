@@ -80,9 +80,11 @@ npm run dev
 - AI workout Planner
   - Select fitness goal e.g. loose weight or gain muscles
   - LLM provides response
-- AI Travel Guide
-- AI Job Interview Coach
-- AI recipe Generator
+  - [Sample code](./project-4/)
+- Other:
+  - AI Travel Guide
+  - AI Job Interview Coach
+  - AI recipe Generator
 
 
 
